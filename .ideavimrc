@@ -1,0 +1,14 @@
+let mapleader = '"'
+nnoremap <Leader>ev :<C-u>vsplit ~/.ideavimrc<CR>
+nnoremap <Leader>sv :<C-u>source ~/.ideavimrc<CR>
+
+nmap gd :action GotoDeclaration<CR>
+nmap gi :action GotoImplementation<CR>
+nmap su :action ShowUsages<CR>
+
+nnoremap <Leader>gtf :action GotoFile<CR>
+nnoremap <Leader>rn :action RenameElement<CR>
+nnoremap <Leader>ot :action ActivateTerminalToolWindow<CR>
+
+set clipboard+=unnamed
+
