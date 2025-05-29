@@ -1,14 +1,24 @@
+:set keep-english-in-normal
 let mapleader = '"'
 nnoremap <Leader>ev :<C-u>vsplit ~/.ideavimrc<CR>
 nnoremap <Leader>sv :<C-u>source ~/.ideavimrc<CR>
 
-nmap gd :action GotoDeclaration<CR>
-nmap gi :action GotoImplementation<CR>
-nmap su :action ShowUsages<CR>
-
-nnoremap <Leader>gtf :action GotoFile<CR>
-nnoremap <Leader>rn :action RenameElement<CR>
+nnoremap <Leader>gtf :<C-u>action GotoFile<CR>
+nnoremap <Leader>gts :<C-u>action GotoSymbol<CR>
+nnoremap <Leader>gtc :<C-u>action GotoClass<CR>
+nnoremap <Leader>gtl :<C-u>action GotoLine<CR>
+nnoremap <Leader>rn :<C-u>action RenameElement<CR>
+nnoremap <Leader>f :<c-u>action ReformatCode<CR>
 nnoremap <Leader>ot :action ActivateTerminalToolWindow<CR>
 
-set clipboard+=unnamed
+nmap gd :action GotoDeclaration<CR>
+nmap gb :action Back<CR>
+nmap gi :action GotoImplementation<CR>
+nmap su :action ShowUsages<CR>
+nmap z :redo<CR>
+nmap p <Action>(EditorPaste)
 
+vnoremap p <Action>(EditorPaste)
+
+set clipboard+=unnamed
+set ignorecase
