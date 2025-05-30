@@ -16,9 +16,7 @@ nmap gb :action Back<CR>
 nmap gi :action GotoImplementation<CR>
 nmap su :action ShowUsages<CR>
 nmap z :redo<CR>
-nmap p <Action>(EditorPaste)
 
-vnoremap p <Action>(EditorPaste)
 
 set clipboard+=unnamed
 set ignorecase
